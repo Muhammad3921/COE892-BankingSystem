@@ -1,0 +1,87 @@
+.navbar {
+  position: sticky;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+.left-nav {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+    width: 40px;
+}
+
+#logoButton {
+    font-size: 1.7em;
+    font-family: 'Playfair Display';
+    font-weight: 600;
+    color: #7B9B69;
+    text-transform: none
+}
+  
+.right-nav {
+  display: flex; 
+  align-items: center;
+}
+
+.right-nav a {
+    font-size: 1em;
+    margin-left: 1.4em;
+    padding: 0;
+    font-family: Montserrat;
+    color: #7B9B69;
+    text-transform: none;
+}
+
+.right-nav .logInButton {
+    /* display: block; */
+    outline: 1px solid #7B9B69;
+    border-radius: 20px;
+    padding: .15em 1.4em;
+}
+
+.right-nav .registerButton {
+    color: #FFF;
+    /* display: block; */
+    background-color: #7B9B69;
+    border-radius: 20px;
+    padding: .15em 1.4em;
+}
+
+.small-view-nav {
+    display: none;
+}
+
+@media screen and (max-width: 899px) {
+    
+    .small-view-nav {
+        display: block;
+    }
+
+    .left-nav {
+        font-size: 0.8em;
+    }
+
+    #logo {
+        width: 30px;
+    }
+
+    .large-view-nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    
+    .left-nav {
+        font-size: 0.7em;
+    }
+
+    #logo {
+        width: 25px;
+    }
+}

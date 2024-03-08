@@ -1,0 +1,38 @@
+ 
+  .left-box {
+    width: 50%; 
+    padding: 12px; 
+    margin: 10px; 
+    float:left;
+  }
+  
+  .right-box {
+    width: 50%; 
+    padding: 12px; 
+    margin: 10px; 
+    float:right;
+    
+  }
+
+  .about__image {
+    position: fixed;
+    left: 50%;
+    width: 100%;
+    height: 75vh;
+    background-image: url('doctor.jpg');
+    background-size: contain;
+    border-radius: 50px;
+    text-align: center;
+    object-fit: cover;
+    border: 2px solid #ddd; 
+  }
+
+  .page{
+    padding-top: 50px;
+  }
+
+  .separator {
+    border: none; 
+    border-top: 2px solid  #7B9B69; 
+    margin: 20px 0; 
+  }

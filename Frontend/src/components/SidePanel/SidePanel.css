@@ -1,0 +1,29 @@
+#sidepanel-logo {
+    width: 30px;
+    height: 30px;
+}
+
+#sidepanel-logo g {
+    fill: #FFF;
+    stroke: #FFF;
+}
+
+div.side-panel {
+    background-color: #FFF;
+}
+
+div.side-panel span {
+    font-family: 'Montserrat';
+}
+
+div.side-panel hr {
+    border: #FFF 1px solid;
+}
+
+div.side-panel svg path {
+    fill: #FFF;
+}
+
+div.side-panel .selected svg path {
+    fill: #7B9B69;
+}

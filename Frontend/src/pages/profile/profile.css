@@ -1,0 +1,35 @@
+button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.green-square {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 900%; 
+  max-width: 2000px; 
+  height: 720px;
+  background-image: url('flowers.png');
+  background-size: cover;
+  margin-left: 300px;
+  margin-top: -688px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  background-size: contain;
+}
+
+.green-square.editing {
+  height: 1100px;
+  margin-top: -950px;
+}
+
+.pharmacist {
+  height: 780px;
+  margin-top: -760px;
+}
+
+.pharmacist-editing {
+  height: 1200px;
+  margin-top: -1080px;
+}

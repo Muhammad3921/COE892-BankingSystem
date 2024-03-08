@@ -1,0 +1,123 @@
+body {
+    overflow-x: hidden;
+}
+
+.pharma-container {
+    font-family: 'Playfair Display';
+}
+
+.header-text {
+  font-size: 3em;
+  font-weight: 600;
+  color: #7B9B69;
+}
+
+.slogan-text {
+  font-size: 2em;
+  font-weight: 500;
+  color: #7B9B69;
+}
+
+#compareButton {
+    color: #FFF;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    background-color: #7B9B69;
+    border-radius: 20px;
+    padding: .4em 1.4em;
+    text-transform: none;
+    display: block;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.compareContainer {
+    margin-top: 10em
+}
+
+.subHeaderText {
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: .5em;
+}
+
+.conflictContainer {
+    display: flex;
+    align-items: center;
+}
+
+.compareContainer span {
+    display: block;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    color: #000;
+    font-size: 1.2em;
+    font-family: 'Montserrat';
+}
+
+.compareContainer p {
+    color: #707070;
+    font-family: 'Montserrat';
+    font-size: 1.5em;
+    margin: 0;
+    margin-left: 0.5em;
+}
+
+div .image {
+    background-color: #7B9B69;
+    margin-top: 2em;
+    height: 50em;
+    width: 100em;
+    border-radius: 50px 0px 0px 50px;
+}
+
+@media screen and (max-width: 1199px) {
+    
+    .text-container {
+        font-size: 0.8em;
+    }
+
+    div .image {
+        margin-top: 0;
+        height: 40em;
+        border-radius: 40px;
+    }
+}
+
+@media screen and (max-width: 899px) {
+    
+    .text-container {
+        font-size: 0.7em;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    div .image-container {
+        margin: auto;
+    }
+
+    div .image {
+        width: 50em;
+        height: 30em;
+        border-radius: 30px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    
+    .text-container {
+        font-size: 0.6em;
+    }
+
+    #getHelpButton {
+        font-size: .8em;
+    }
+
+    div .image {
+        width: 30em;
+        height: 30em;
+        border-radius: 20px;
+    }
+}

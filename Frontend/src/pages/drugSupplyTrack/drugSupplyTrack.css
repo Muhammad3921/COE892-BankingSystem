@@ -1,0 +1,16 @@
+.green__tile {
+    position: fixed;
+    left: 70%;
+    top: 125px; 
+    width: 100%;
+    height: 77vh;
+    background-color: #7B9B69;
+    background-size: contain;
+    border-radius: 50px;
+    text-align: center;
+}
+
+button:focus {
+    outline: none;
+    background-color: inherit; 
+}

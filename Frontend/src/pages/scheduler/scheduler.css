@@ -1,0 +1,106 @@
+/* Variables */
+:root {
+  --fc-border-color: rgba(123, 155, 105, 0.4);
+}
+
+/* Base calendar styling */
+.fc {
+  border: 2px solid var(--fc-border-color);
+  border-radius: 15px;
+  overflow: hidden; 
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+  padding: 20px 15px 0;
+}
+
+.fc .fc-toolbar-title{
+  font-weight: bold;
+}
+
+/* Day grid specific styling */
+.fc-daygrid-day-top {
+  flex-direction: row !important;
+}
+
+.fc-daygrid-day-frame {
+  height: 60px;
+  overflow: auto;
+}
+
+.fc-daygrid-day:nth-last-child(1) .fc-daygrid-day-frame {
+  border-right: none;
+}
+
+.fc-daygrid-day-number {
+    color: #7b9b69;
+    font-weight: bold;
+}
+
+/* Event styling */
+.fc-event {
+  white-space: normal;
+  overflow: visible;
+  height: auto;
+  color: #7b9b69;
+}
+
+.fc-daygrid-event {
+  white-space: normal !important; 
+  overflow: visible;
+  height: auto;
+  display: block;
+  padding-bottom: 8px;
+}
+
+/* Highlighting */
+.fc .fc-highlight {
+  background: none;
+  border-bottom: 4px solid #7b9b69;
+}
+
+/* Buttons */
+.fc .fc-button-primary:disabled,
+.fc .fc-button-primary {
+  color: #7b9b69;
+  font-weight: bold;
+  background-color: white;
+  border-color: #7b9b69;
+  border-width: 2px;
+}
+
+.fc .fc-button-primary:focus, 
+.fc .fc-button-primary:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Scroll grid */
+.fc-scrollgrid-sync-inner {
+  border-top: 1px solid var(--fc-border-color);
+  border-right: 1px solid var(--fc-border-color);
+}
+
+/* Column headers */
+.fc-col-header-cell .fc-col-header-cell-cushion {
+    color:#7b9b69;
+    font-weight: bold;
+}
+
+/* Background colors for column headers */
+.fc-col-header-cell:nth-child(1) { background-color: rgba(255,214,214, 0.25); }
+.fc-col-header-cell:nth-child(2) { background-color: rgba(255,243,214, 0.25); }
+.fc-col-header-cell:nth-child(3) { background-color: rgba(237,255,214, 0.25); }
+.fc-col-header-cell:nth-child(4) { background-color: rgba(214,255,227, 0.25); }
+.fc-col-header-cell:nth-child(5) { background-color: rgba(214,249,255, 0.25); }
+.fc-col-header-cell:nth-child(6) { background-color: rgba(222,214,255, 0.25); }
+.fc-col-header-cell:nth-child(7) { background-color: rgba(254,214,255, 0.25); }
+
+/* Background colors for days */
+.fc-daygrid-day:nth-child(1) { background-color: rgba(255,214,214, 0.25); }
+.fc-daygrid-day:nth-child(2) { background-color: rgba(255,243,214, 0.25); }
+.fc-daygrid-day:nth-child(3) { background-color: rgba(237,255,214, 0.25); }
+.fc-daygrid-day:nth-child(4) { background-color: rgba(214,255,227, 0.25); }
+.fc-daygrid-day:nth-child(5) { background-color: rgba(214,249,255, 0.25); }
+.fc-daygrid-day:nth-child(6) { background-color: rgba(222,214,255, 0.25); }
+.fc-daygrid-day:nth-child(7) { background-color: rgba(254,214,255, 0.25); }

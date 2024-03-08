@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="Group_82" data-name="Group 82" transform="translate(-152 -583)">
+    <g id="Rectangle_12" data-name="Rectangle 12" transform="translate(152 583)" fill="#7b9b69" stroke="#fff" stroke-width="2">
+      <rect width="60" height="60" rx="30" stroke="none"/>
+      <rect x="1" y="1" width="58" height="58" rx="29" fill="none"/>
+    </g>
+    <path id="Icon_open-person" data-name="Icon open-person" d="M13.983,0C10.138,0,6.992,3.915,6.992,8.74s3.146,8.74,6.992,8.74,6.992-3.915,6.992-8.74S17.829,0,13.983,0ZM6.677,17.479A7,7,0,0,0,0,24.471v3.5H27.967v-3.5a6.974,6.974,0,0,0-6.677-6.992,9.818,9.818,0,0,1-7.306,3.5A9.818,9.818,0,0,1,6.677,17.479Z" transform="translate(168 597.033)" fill="#fff"/>
+  </g>
+</svg>
