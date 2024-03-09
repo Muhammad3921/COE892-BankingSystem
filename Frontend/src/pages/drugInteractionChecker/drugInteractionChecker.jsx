@@ -141,7 +141,7 @@ const DrugInteractionChecker = () => {
                     '.MuiDataGrid-columnHeaders': {
                         fontWeight: '500',
                         fontSize: '1.2em',
-                        color: '#25b4ec'
+                        color: '#f1860b'
                     }
                   }}
                   rows={medications}
@@ -186,7 +186,7 @@ const DrugInteractionChecker = () => {
                     '.MuiDataGrid-columnHeaders': {
                         fontWeight: '500',
                         fontSize: '1.2em',
-                        color: '#25b4ec'
+                        color: '#f1860b'
                     }
                   }}
                   rows={medications}

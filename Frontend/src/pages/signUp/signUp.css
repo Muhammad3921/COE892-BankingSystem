@@ -1,5 +1,5 @@
 .square {
-  background-color: #25b4ec;
+  background-color: #f1860b;
   width: 489%;
   height: 84vh;
   border-top-right-radius: 50px;
@@ -46,7 +46,7 @@ input:focus:not([read-only]) {
 
 @media (min-width: 0px) and (max-width: 600px) {
   .square {
-    background-color: #25b4ec;
+    background-color: #f1860b;
     width: 800%;
     height: 85vh;
     border-top-right-radius: 20px;
@@ -71,7 +71,7 @@ input:focus:not([read-only]) {
 
 @media (min-width: 600px) and (max-width: 1200px) {
   .square {
-    background-color: #25b4ec;
+    background-color: #f1860b;
     width: 490%;
     height: 83vh;
     border-top-right-radius: 20px;

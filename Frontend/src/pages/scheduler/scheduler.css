@@ -33,7 +33,7 @@
 }
 
 .fc-daygrid-day-number {
-    color: #25b4ec;
+    color: #f1860b;
     font-weight: bold;
 }
 
@@ -42,7 +42,7 @@
   white-space: normal;
   overflow: visible;
   height: auto;
-  color: #25b4ec;
+  color: #f1860b;
 }
 
 .fc-daygrid-event {
@@ -56,16 +56,16 @@
 /* Highlighting */
 .fc .fc-highlight {
   background: none;
-  border-bottom: 4px solid #25b4ec;
+  border-bottom: 4px solid #f1860b;
 }
 
 /* Buttons */
 .fc .fc-button-primary:disabled,
 .fc .fc-button-primary {
-  color: #25b4ec;
+  color: #f1860b;
   font-weight: bold;
   background-color: white;
-  border-color: #25b4ec;
+  border-color: #f1860b;
   border-width: 2px;
 }
 
@@ -83,7 +83,7 @@
 
 /* Column headers */
 .fc-col-header-cell .fc-col-header-cell-cushion {
-    color:#25b4ec;
+    color:#f1860b;
     font-weight: bold;
 }
 
