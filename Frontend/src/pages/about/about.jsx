@@ -1,71 +1,64 @@
 import React from "react";
 import './about.css';
+
 function About() {
-	document.title = 'About Page';
-	return (
-		<div>
+    document.title = 'About Page';
+    return (
+        <div>
+            <main className="page">
+                <h2 className="left-box">Multi-Branch Bank Management System</h2>
+                <div className="about__image"></div>
+                <div className="left-box">
+                    <p>In a world where managing banking operations across multiple branches poses significant challenges, a team of innovators identified the need for a cohesive solution. With the complexities of multi-branch banking in mind, the concept of Multi-Branch Bank Management System emerged.</p>
+                    <br />
+                    <hr className="separator" />
+                </div>
 
-			<main className="page">
-				<h2 className="left-box">Our Shared Challenge</h2>
-				<div className="about__image"></div>
-				<div className="left-box">
-					<p>In a world where health is paramount, a group of friends faced a common struggle - tracking medication. Juggling multiple prescriptions, varied dosages, and different schedules created a chaotic scenario. The need for a cohesive solution led to the birth of Pharmaceutical Portal.</p>
-					<br/>
-					<hr className="separator" />
-				</div>
-				
+                <h2 className="left-box">Our Solution: Multi-Branch Bank Management System</h2>
+                <div>
+                    <div className="left-box">
+                        <h3>Efficient Banking Operations</h3>
+                        <p>The Multi-Branch Bank Management System is a user-friendly web application designed to streamline banking operations across multiple branches. Our solution offers centralized staff databases, synchronized transactions, and robust security measures.</p>
+                    </div>
+                    <div className="left-box">
+                        <h3>Seamless Transactions Across Branches</h3>
+                        <p>With synchronized transactions and centralized client information, our system ensures seamless banking experiences for customers across all branches. Say goodbye to disjointed banking processes and hello to effortless transactions.</p>
+                    </div>
+                    <div className="left-box">
+                        <h3>Enhanced Data Integrity and Confidentiality</h3>
+                        <p>Multi-Branch Bank Management System prioritizes data integrity and confidentiality. With secure access controls and encrypted communication, your banking information remains safe and protected.</p>
+                        <br />
+                        <hr className="separator" />
+                    </div>
+                </div>
 
-				<h2 className="left-box">Our Solution: Pharmaceutical Portal Web App</h2>
-				<div>
-					<div className="left-box">
-						<h3>Simplifying Medication Management</h3>
-						<p>Pharmaceutical Portal is a user-friendly web app designed to streamline the process of tracking and managing medications. Our solution goes beyond basic reminders; it integrates notification services and a calendar system to ensure you never miss a dose.</p>
-					</div>
-					<div className="left-box">
-						<h3>Seamlessly Integrated Notification Services</h3>
-						<p>Receive timely reminders through the app, keeping you informed about when to take your medication. Customizable notification preferences cater to individual needs, making it a tailored experience for each user.</p>
-					</div>
-					<div className="left-box">
-						<h3>Calendar Integration for Effortless Planning</h3>
-						<p>Pharmaceutical Portal syncs with your calendar, providing a comprehensive overview of your medication schedule. This integration ensures that your medication plan aligns seamlessly with your daily activities, reducing the chances of missed doses.</p>
-						<br/>
-					<hr className="separator" />
-					</div>
-				</div>
+                <h2 className="left-box">Embark on a Journey with Multi-Branch Bank Management System</h2>
+                <div>
+                    <div className="left-box">
+                        <h3>Comprehensive Banking Solutions</h3>
+                        <p>Beyond streamlining operations, Multi-Branch Bank Management System offers comprehensive banking solutions:</p>
+                        <h4>1. Real-Time Transaction Monitoring</h4>
+                        <p>-Track transactions across branches in real-time, ensuring efficient banking operations.</p>
+                        <h4>2. Branch-Specific Operations</h4>
+                        <p>-Manage cash reserves, staff scheduling, and branch-specific tasks with ease.</p>
+                        <h4>3. Scalability and Growth</h4>
+                        <p>-Scale your banking operations seamlessly to accommodate growth and expansion.</p>
+                    </div>
+                    <div className="left-box">
+                        <h3>Empowering Banking Experience</h3>
+                        <p>Multi-Branch Bank Management System offers a suite of features to empower your banking experience. Stay informed, make informed decisions, and take control of your banking operations with our comprehensive system.</p>
+                        <br />
+                        <hr className="separator" />
+                    </div>
+                </div>
 
-				<h2 className="left-box">Take a Deep Dive with Pharmaceutical Portal</h2>
-				<div>
-					<div className="left-box">
-						<h3>Comprehensive Medication Information</h3>
-						<p>Beyond its tracking capabilities, Pharmaceutical Portal empowers users with in-depth knowledge about their medications. Take a deep dive into:</p>
-						<h4>1. Side Effects</h4>
-						<p>-Access detailed information on potential side effects associated with your medication.</p>
-						<h4>2. Dosage Guidance</h4>
-						<p>-Understand the correct dosage for each medication, ensuring safe and effective use.</p>
-						<h4>3. Personalized Insights</h4>
-						<p>-Receive tailored insights based on your medication history and preferences.</p>
-						<h4>4. Interaction Warnings</h4>
-						<p>-Stay informed about potential interactions between different medications.</p>
-					</div>
-					<div className="left-box">
-						<h3>Educational Resources for Empowered Health</h3>
-						<p>Pharmaceutical Portal offers a library of resources to enhance your understanding of medications, fostering a proactive approach to your health. Stay informed, make informed decisions, and take control of your well-being with Pharmaceutical Portal.</p>
-						<br/>
-					<hr className="separator" />
-					</div>
-				</div>
-
-				<br />
-				<br />
-				<br />
-				<p className="left-box">Join us on the journey to simplified medication management and empowered health with Pharmaceutical Portal. Your well-being, our priority.</p>
-			</main>
-
-
-		</div>
-
-
-	)
+                <br />
+                <br />
+                <br />
+                <p className="left-box">Join us on the journey to efficient multi-branch banking operations with Multi-Branch Bank Management System. Your banking experience, our priority.</p>
+            </main>
+        </div>
+    )
 }
 
-export default About
+export default About;
