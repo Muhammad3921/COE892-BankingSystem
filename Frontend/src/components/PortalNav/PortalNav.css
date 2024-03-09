@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat';
-    color: #25b4ec;
+    color: #f1860b;
 }
 
 .portalBar {
@@ -17,7 +17,7 @@ body {
 
 a.messageButton, a.notificationButton {
     display: inline-flex;
-    outline: 1px solid #25b4ec;
+    outline: 1px solid #f1860b;
     border-radius: 10px;
     padding: 0.5em;
 }

@@ -108,7 +108,7 @@ function PrescriptionSubmit() {
       <p
         style={{
           marginLeft: "20%",
-          color: "#25b4ec",
+          color: "#f1860b",
           fontSize: "35px",
           marginTop: "23px",
           fontWeight: "bold",
@@ -130,7 +130,7 @@ function PrescriptionSubmit() {
           }}
         >
           <div className="form-group">
-            <label htmlFor="receiptNumber" style={{ color: "#25b4ec" }}>
+            <label htmlFor="receiptNumber" style={{ color: "#f1860b" }}>
               Rept. No
               {isFieldEmpty(formData.receiptNumber) ? (
                 <span style={{ color: "red" }}>*</span>
@@ -144,13 +144,13 @@ function PrescriptionSubmit() {
               value={formData.receiptNumber}
               onChange={handleChange}
               style={{
-                borderBottom: "2px solid #25b4ec",
+                borderBottom: "2px solid #f1860b",
               }}
               required
             />
           </div>
           <div className="form-group">
-            <label htmlFor="dateIssued" style={{ color: "#25b4ec" }}>
+            <label htmlFor="dateIssued" style={{ color: "#f1860b" }}>
               Date issued
               {isFieldEmpty(formData.dateIssued) ? (
                 <span style={{ color: "red" }}>*</span>
@@ -164,13 +164,13 @@ function PrescriptionSubmit() {
               value={formData.dateIssued}
               onChange={handleChange}
               style={{
-                borderBottom: "2px solid #25b4ec",
+                borderBottom: "2px solid #f1860b",
               }}
               required
             />
           </div>
           <div className="form-group">
-            <label htmlFor="doctorName" style={{ color: "#25b4ec" }}>
+            <label htmlFor="doctorName" style={{ color: "#f1860b" }}>
               Name of Doctor
               {isFieldEmpty(formData.doctorName) ? (
                 <span style={{ color: "red" }}>*</span>
@@ -184,7 +184,7 @@ function PrescriptionSubmit() {
               value={formData.doctorName}
               onChange={handleChange}
               style={{
-                borderBottom: "2px solid #25b4ec",
+                borderBottom: "2px solid #f1860b",
               }}
               required
             />
@@ -201,7 +201,7 @@ function PrescriptionSubmit() {
           }}
         >
           <div className="form-group">
-            <label htmlFor="hospitalName" style={{ color: "#25b4ec" }}>
+            <label htmlFor="hospitalName" style={{ color: "#f1860b" }}>
               Name of hospital/clinic
               {isFieldEmpty(formData.hospitalName) ? (
                 <span style={{ color: "red" }}>*</span>
@@ -215,13 +215,13 @@ function PrescriptionSubmit() {
               value={formData.hospitalName}
               onChange={handleChange}
               style={{
-                borderBottom: "2px solid #25b4ec",
+                borderBottom: "2px solid #f1860b",
               }}
               required
             />
           </div>
           <div className="form-group">
-            <label htmlFor="hospitalAddress" style={{ color: "#25b4ec" }}>
+            <label htmlFor="hospitalAddress" style={{ color: "#f1860b" }}>
               Address of hospital/clinic
               {isFieldEmpty(formData.hospitalAddress) ? (
                 <span style={{ color: "red" }}>*</span>
@@ -235,7 +235,7 @@ function PrescriptionSubmit() {
               value={formData.hospitalAddress}
               onChange={handleChange}
               style={{
-                borderBottom: "2px solid #25b4ec",
+                borderBottom: "2px solid #f1860b",
               }}
               required
             />
@@ -255,7 +255,7 @@ function PrescriptionSubmit() {
           }}
         >
           <div className="form-group">
-            <label htmlFor="title" style={{ color: "#25b4ec" }}>
+            <label htmlFor="title" style={{ color: "#f1860b" }}>
               Name
               {isFieldEmpty(formData.title) ? (
                 <span style={{ color: "red" }}>*</span>
@@ -266,7 +266,7 @@ function PrescriptionSubmit() {
               name="title"
               value={formData.title}
               onChange={handleChange}
-              style={{ borderBottom: "2px solid #25b4ec", display: "block" }}
+              style={{ borderBottom: "2px solid #f1860b", display: "block" }}
               required
             >
               <option value="">Select a medication</option>
@@ -279,7 +279,7 @@ function PrescriptionSubmit() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="drugStrength" style={{ color: "#25b4ec" }}>
+            <label htmlFor="drugStrength" style={{ color: "#f1860b" }}>
               Strength
               {isFieldEmpty(formData.drugStrength) ? (
                 <span style={{ color: "red" }}>*</span>
@@ -293,13 +293,13 @@ function PrescriptionSubmit() {
               value={formData.drugStrength}
               onChange={handleChange}
               style={{
-                borderBottom: "2px solid #25b4ec",
+                borderBottom: "2px solid #f1860b",
               }}
               required
             />
           </div>
           <div className="form-group">
-            <label htmlFor="dosage" style={{ color: "#25b4ec" }}>
+            <label htmlFor="dosage" style={{ color: "#f1860b" }}>
               Dosage
               {isFieldEmpty(formData.dosage) ? (
                 <span style={{ color: "red" }}>*</span>
@@ -313,13 +313,13 @@ function PrescriptionSubmit() {
               value={formData.dosage}
               onChange={handleChange}
               style={{
-                borderBottom: "2px solid #25b4ec",
+                borderBottom: "2px solid #f1860b",
               }}
               required
             />
           </div>
           <div className="form-group">
-            <label htmlFor="durationWeeks" style={{ color: "#25b4ec" }}>
+            <label htmlFor="durationWeeks" style={{ color: "#f1860b" }}>
               Duration (weeks)
               {isFieldEmpty(formData.durationWeeks) ? (
                 <span style={{ color: "red" }}>*</span>
@@ -333,7 +333,7 @@ function PrescriptionSubmit() {
               value={formData.durationWeeks}
               onChange={handleChange}
               style={{
-                borderBottom: "2px solid #25b4ec",
+                borderBottom: "2px solid #f1860b",
               }}
               required
             />
@@ -355,7 +355,7 @@ function PrescriptionSubmit() {
             style={{
               width: "20%",
               color: "white",
-              backgroundColor: "#25b4ec",
+              backgroundColor: "#f1860b",
               borderRadius: "15px",
               display: "block",
               marginTop: "30px",
@@ -369,8 +369,8 @@ function PrescriptionSubmit() {
             style={{
               width: "20%",
               backgroundColor: "white",
-              color: "#25b4ec",
-              borderColor: "#25b4ec",
+              color: "#f1860b",
+              borderColor: "#f1860b",
               borderWidth: "1px",
               borderStyle: "solid",
               borderRadius: "15px",

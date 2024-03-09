@@ -19,7 +19,7 @@
     font-size: 1.7em;
     font-family: 'Playfair Display';
     font-weight: 600;
-    color: #25b4ec;
+    color: #f1860b;
     text-transform: none
 }
   
@@ -33,13 +33,13 @@
     margin-left: 1.4em;
     padding: 0;
     font-family: Montserrat;
-    color: #25b4ec;
+    color: #f1860b;
     text-transform: none;
 }
 
 .right-nav .logInButton {
     /* display: block; */
-    outline: 1px solid #25b4ec;
+    outline: 1px solid #f1860b;
     border-radius: 20px;
     padding: .15em 1.4em;
 }
@@ -47,7 +47,7 @@
 .right-nav .registerButton {
     color: #FFF;
     /* display: block; */
-    background-color: #25b4ec;
+    background-color: #f1860b;
     border-radius: 20px;
     padding: .15em 1.4em;
 }

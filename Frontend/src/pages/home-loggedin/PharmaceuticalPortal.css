@@ -9,27 +9,27 @@ body {
 .message-text {
   font-size: 3.4em;
   font-weight: 600;
-  color: #25b4ec;
+  color: #f1860b;
 }
 
 .slogan-text {
   font-size: 2em;
   font-weight: 500;
-  color: #25b4ec;
+  color: #f1860b;
 }
 
 #getHelpButton {
     color: #FFF;
     font-family: 'Montserrat';
     font-weight: 300;
-    background-color: #25b4ec;
+    background-color: #f1860b;
     border-radius: 20px;
     padding: .4em 1.4em;
     text-transform: none;
 }
 
 div .image {
-    background-color: #25b4ec;
+    background-color: #f1860b;
     margin-top: 2em;
     height: 50em;
     width: 100em;

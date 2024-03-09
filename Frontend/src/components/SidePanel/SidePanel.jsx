@@ -46,7 +46,7 @@ const openedMixin = (theme) => ({
   }),
   overflowX: 'hidden',
   padding: '2.8em 1em 1em 1em',
-  backgroundColor: '#25b4ec',
+  backgroundColor: '#f1860b',
   color: '#FFF',
   borderRadius: '0 0 50px 0',
   border: 'none',
@@ -63,7 +63,7 @@ const closedMixin = (theme) => ({
     width: `calc(${theme.spacing(8)} + 1px)`,
   },
   padding: '2.8em 1em 1em 1em',
-  backgroundColor: '#25b4ec',
+  backgroundColor: '#f1860b',
   color: '#FFF',
   borderRadius: '0 0 50px 0',
   border: 'none',
@@ -129,8 +129,8 @@ export default function SidePanel() {
             className={location.pathname === item.path ? 'selected' : ''}
             sx={{ display: 'block'}}
             style={{
-              color: location.pathname === item.path ? '#25b4ec' : '#FFF',
-              backgroundColor: location.pathname === item.path ? '#FFF' : '#25b4ec',
+              color: location.pathname === item.path ? '#f1860b' : '#FFF',
+              backgroundColor: location.pathname === item.path ? '#FFF' : '#f1860b',
               borderRadius: '20px',
             }}>
               <ListItemButton
@@ -161,8 +161,8 @@ export default function SidePanel() {
             className={location.pathname === item.path ? 'selected' : ''}
             sx={{ display: 'block', }}
             style={{
-              color: location.pathname === item.path ? '#25b4ec' : '#FFF',
-              backgroundColor: location.pathname === item.path ? '#FFF' : '#25b4ec',
+              color: location.pathname === item.path ? '#f1860b' : '#FFF',
+              backgroundColor: location.pathname === item.path ? '#FFF' : '#f1860b',
               borderRadius: '20px',
             }}>
               <ListItemButton 
@@ -210,8 +210,8 @@ export default function SidePanel() {
             className={location.pathname === item.path ? 'selected' : ''}
             sx={{ display: 'block'}}
             style={{
-              color: location.pathname === item.path ? '#25b4ec' : '#FFF',
-              backgroundColor: location.pathname === item.path ? '#FFF' : '#25b4ec',
+              color: location.pathname === item.path ? '#f1860b' : '#FFF',
+              backgroundColor: location.pathname === item.path ? '#FFF' : '#f1860b',
               borderRadius: '20px',
             }}>
               <ListItemButton

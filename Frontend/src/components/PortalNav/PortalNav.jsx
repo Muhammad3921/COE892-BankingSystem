@@ -59,7 +59,7 @@ function PortalNav() {
   <MenuItem onClick={handleClose} component={Link} to={item.path}
   style={{
       fontWeight: location.pathname === item.path ? '600' : '500',
-      color: '#25b4ec'
+      color: '#f1860b'
       }}>
       {item.name}
   </MenuItem>

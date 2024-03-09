@@ -197,13 +197,13 @@ function SignUp() {
             {successMessage}
           </Alert>
         )}
-        <p style={{ textAlign: 'center', color: '#25b4ec', fontSize: '35px', marginTop: '23px', fontWeight: 'bold' }}>
+        <p style={{ textAlign: 'center', color: '#f1860b', fontSize: '35px', marginTop: '23px', fontWeight: 'bold' }}>
           Welcome!
         </p>
         <div className="form-group">
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap: '50px' }}>
             <div className="form-group">
-              <label htmlFor="firstName" style={{ color: '#25b4ec' }}>
+              <label htmlFor="firstName" style={{ color: '#f1860b' }}>
                 First name{isFieldEmpty(formData.firstName) ? <span style={{ color: 'red' }}>*</span> : null}
               </label>
               <input
@@ -214,12 +214,12 @@ function SignUp() {
                 value={formData.firstName}
                 onChange={handleChange}
                 style={{
-                  borderBottom: '2px solid #25b4ec',
+                  borderBottom: '2px solid #f1860b',
                 }}
               />
             </div>
             <div className="form-group">
-              <label htmlFor="lastName" style={{ color: '#25b4ec' }}>
+              <label htmlFor="lastName" style={{ color: '#f1860b' }}>
                 Last name{isFieldEmpty(formData.lastName) ? <span style={{ color: 'red' }}>*</span> : null}
               </label>
               <input
@@ -230,21 +230,21 @@ function SignUp() {
                 value={formData.lastName}
                 onChange={handleChange}
                 style={{
-                  borderBottom: '2px solid #25b4ec',
+                  borderBottom: '2px solid #f1860b',
                 }}
               />
             </div>
             <div className="form-group">
-              <label htmlFor="gender" style={{ color: '#25b4ec' }}>
+              <label htmlFor="gender" style={{ color: '#f1860b' }}>
                 Gender{isFieldEmpty(formData.gender) ? <span style={{ color: 'red' }}>*</span> : null}
               </label>
               <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap: '5px' }}>
                 <button
                   type="button"
                   style={{
-                    border: '1px solid #25b4ec',
-                    color: formData.gender === 'Male' ? 'white' : '#25b4ec',
-                    backgroundColor: formData.gender === 'Male' ? '#25b4ec' : 'white',
+                    border: '1px solid #f1860b',
+                    color: formData.gender === 'Male' ? 'white' : '#f1860b',
+                    backgroundColor: formData.gender === 'Male' ? '#f1860b' : 'white',
                     borderRadius: '15px',
                     padding: '5px 20px',
                     cursor: 'pointer',
@@ -257,9 +257,9 @@ function SignUp() {
                 <button
                   type="button"
                   style={{
-                    border: '1px solid #25b4ec',
-                    color: formData.gender === 'Female' ? 'white' : '#25b4ec',
-                    backgroundColor: formData.gender === 'Female' ? '#25b4ec' : 'white',
+                    border: '1px solid #f1860b',
+                    color: formData.gender === 'Female' ? 'white' : '#f1860b',
+                    backgroundColor: formData.gender === 'Female' ? '#f1860b' : 'white',
                     borderRadius: '15px',
                     padding: '5px 20px',
                     cursor: 'pointer',
@@ -275,7 +275,7 @@ function SignUp() {
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap: '50px' }}>
             {formData.userType !== 'Pharmacist' && (
               <div className="form-group">
-                <label htmlFor="homeAddress" style={{ color: '#25b4ec' }}>
+                <label htmlFor="homeAddress" style={{ color: '#f1860b' }}>
                   Home Address{isFieldEmpty(formData.homeAddress) ? <span style={{ color: 'red' }}>*</span> : null}
                 </label>
                 <input
@@ -286,14 +286,14 @@ function SignUp() {
                   value={formData.homeAddress}
                   onChange={handleChange}
                   style={{
-                    borderBottom: '2px solid #25b4ec',
+                    borderBottom: '2px solid #f1860b',
                   }}
                 />
               </div>
             )}
             {formData.userType === 'Pharmacist' && (
               <div className="form-group">
-                <label htmlFor="hiredDate" style={{ color: '#25b4ec' }}>
+                <label htmlFor="hiredDate" style={{ color: '#f1860b' }}>
                   Hire Date{isFieldEmpty(formData.hiredDate) ? <span style={{ color: 'red' }}>*</span> : null}
                 </label>
                 <input
@@ -304,14 +304,14 @@ function SignUp() {
                   value={formData.hiredDate}
                   onChange={handleChange}
                   style={{
-                    borderBottom: '2px solid #25b4ec',
+                    borderBottom: '2px solid #f1860b',
                   }}
                 />
                 {validationErrors.hiredDate && <p style={{ color: 'red', fontSize: '11px', marginTop: '-5px' }}>{validationErrors.hiredDate}</p>}
               </div>
             )}
             <div className="form-group">
-              <label htmlFor="dateOfBirth" style={{ color: '#25b4ec' }}>
+              <label htmlFor="dateOfBirth" style={{ color: '#f1860b' }}>
                 Date of Birth{isFieldEmpty(formData.dateOfBirth) ? <span style={{ color: 'red' }}>*</span> : null}
               </label>
               <input
@@ -322,22 +322,22 @@ function SignUp() {
                 value={formData.dateOfBirth}
                 onChange={handleChange}
                 style={{
-                  borderBottom: '2px solid #25b4ec',
+                  borderBottom: '2px solid #f1860b',
                 }}
               />
               {validationErrors.dateOfBirth && <p style={{ color: 'red', fontSize: '11px', marginTop: '-5px' }}>{validationErrors.dateOfBirth}</p>}
             </div>
             <div className="form-group">
-              <label htmlFor="userType" style={{ color: '#25b4ec' }}>
+              <label htmlFor="userType" style={{ color: '#f1860b' }}>
                 User Type{isFieldEmpty(formData.userType) ? <span style={{ color: 'red' }}>*</span> : null}
               </label>
               <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap: '5px' }}>
                 <button
                   type="button"
                   style={{
-                    border: '1px solid #25b4ec',
-                    color: formData.userType === 'Patient' ? 'white' : '#25b4ec',
-                    backgroundColor: formData.userType === 'Patient' ? '#25b4ec' : 'white',
+                    border: '1px solid #f1860b',
+                    color: formData.userType === 'Patient' ? 'white' : '#f1860b',
+                    backgroundColor: formData.userType === 'Patient' ? '#f1860b' : 'white',
                     borderRadius: '15px',
                     padding: '5px 20px',
                     cursor: 'pointer',
@@ -350,9 +350,9 @@ function SignUp() {
                 <button
                   type="button"
                   style={{
-                    border: '1px solid #25b4ec',
-                    color: formData.userType === 'Pharmacist' ? 'white' : '#25b4ec',
-                    backgroundColor: formData.userType === 'Pharmacist' ? '#25b4ec' : 'white',
+                    border: '1px solid #f1860b',
+                    color: formData.userType === 'Pharmacist' ? 'white' : '#f1860b',
+                    backgroundColor: formData.userType === 'Pharmacist' ? '#f1860b' : 'white',
                     borderRadius: '15px',
                     padding: '5px 20px',
                     cursor: 'pointer',
@@ -368,7 +368,7 @@ function SignUp() {
           {formData.userType === 'Pharmacist' && (
             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap: '50px' }}>
               <div className="form-group" style={{ marginRight: '80px' }}>
-                <label htmlFor="licenseNumber" style={{ color: '#25b4ec' }}>
+                <label htmlFor="licenseNumber" style={{ color: '#f1860b' }}>
                   License Number{isFieldEmpty(formData.licenseNumber) ? <span style={{ color: 'red' }}>*</span> : null}
                 </label>
                 <input
@@ -379,7 +379,7 @@ function SignUp() {
                   value={formData.licenseNumber}
                   onChange={handleChange}
                   style={{
-                    borderBottom: '2px solid #25b4ec',
+                    borderBottom: '2px solid #f1860b',
                   }}
                 />
                 {validationErrors.licenseNumber && <p style={{ color: 'red', fontSize: '11px', marginTop: '-5px' }}>{validationErrors.licenseNumber}</p>}
@@ -388,7 +388,7 @@ function SignUp() {
           )}
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap: '50px' }}>
             <div className="form-group">
-              <label htmlFor="phone" style={{ color: '#25b4ec' }}>
+              <label htmlFor="phone" style={{ color: '#f1860b' }}>
                 Phone{isFieldEmpty(formData.phone) ? <span style={{ color: 'red' }}>*</span> : null}
               </label>
               <input
@@ -399,13 +399,13 @@ function SignUp() {
                 value={formData.phone}
                 onChange={handleChange}
                 style={{
-                  borderBottom: '2px solid #25b4ec',
+                  borderBottom: '2px solid #f1860b',
                 }}
               />
               {validationErrors.phone && <p style={{ color: 'red', fontSize:'11px', marginTop: '-5px' }}>{validationErrors.phone}</p>}
             </div>
             <div className="form-group" style={{ marginRight: '80px' }}>
-              <label htmlFor="email" style={{ color: '#25b4ec' }}>
+              <label htmlFor="email" style={{ color: '#f1860b' }}>
                 Email{isFieldEmpty(formData.email) ? <span style={{ color: 'red' }}>*</span> : null}
               </label>
               <input
@@ -416,7 +416,7 @@ function SignUp() {
                 value={formData.email}
                 onChange={handleChange}
                 style={{
-                  borderBottom: '2px solid #25b4ec',
+                  borderBottom: '2px solid #f1860b',
                 }}
               />
               {validationErrors.email && (
@@ -433,7 +433,7 @@ function SignUp() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap: '50px' }}>
             <div className="form-group">
-              <label htmlFor="password" style={{ color: '#25b4ec' }}>
+              <label htmlFor="password" style={{ color: '#f1860b' }}>
                 Password{isFieldEmpty(formData.password) ? <span style={{ color: 'red' }}>*</span> : null}
               </label>
               <input
@@ -444,13 +444,13 @@ function SignUp() {
                 value={formData.password}
                 onChange={handleChange}
                 style={{
-                  borderBottom: '2px solid #25b4ec',
+                  borderBottom: '2px solid #f1860b',
                 }}
               />
               {validationErrors.password && <p style={{ color: 'red', fontSize:'11px', marginTop: '-5px' }}>{validationErrors.password}</p>}
             </div>
             <div className="form-group" style={{ marginRight: '80px' }}>
-              <label htmlFor="confirmPassword" style={{ color: '#25b4ec' }}>
+              <label htmlFor="confirmPassword" style={{ color: '#f1860b' }}>
                 Confirmed Password{isFieldEmpty(formData.confirmPassword) ? <span style={{ color: 'red' }}>*</span> : null}
               </label>
               <input
@@ -461,7 +461,7 @@ function SignUp() {
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 style={{
-                  borderBottom: '2px solid #25b4ec',
+                  borderBottom: '2px solid #f1860b',
                 }}
               />
               {validationErrors.confirmPassword && <p style={{ color: 'red', fontSize:'11px', marginTop: '-5px' }}>{validationErrors.confirmPassword}</p>}
@@ -474,7 +474,7 @@ function SignUp() {
           style={{
             width: '40%',
             color: 'white',
-            backgroundColor: '#25b4ec',
+            backgroundColor: '#f1860b',
             borderRadius: '15px',
             padding: '8px 20px',
             margin: 'auto',
@@ -485,7 +485,7 @@ function SignUp() {
           Register
         </button>
         <p className="link" style={{ textAlign: 'center', marginTop: '20px' }}>
-          <Link to="/login" style={{ color: '#25b4ec', fontSize: '12px' }}>
+          <Link to="/login" style={{ color: '#f1860b', fontSize: '12px' }}>
             Got an account? Login here
           </Link>
         </p>
