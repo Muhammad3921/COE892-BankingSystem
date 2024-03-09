@@ -12,7 +12,7 @@
 }
 
 .login__subtitle {
-  color: #7B9B69;
+  color: #25b4ec;
   font-size: 40px;
   font-weight: bold;
   margin-top: 130px !important;
@@ -29,14 +29,14 @@
   width: 100%;
   padding: 5px 0;
   border: none;
-  border-bottom: 2px solid #7B9B69 !important;
+  border-bottom: 2px solid #25b4ec!important;
   outline: none;
   transition: all 0.3s;
 }
 
 .login__form-group label,
 .login__form-input::placeholder {
-  color: #7B9B69;
+  color: #25b4ec;
 }
 
 .login__form-group label {
@@ -55,7 +55,7 @@
 
 .login__form-input:not(:placeholder-shown) + label,
 .login__form-input:focus + label {
-  color: #7B9B69 !important;
+  color: #25b4ec!important;
   top: -20px;
   font-size: 12px;
 }
@@ -65,7 +65,7 @@
   margin: 30px auto 0;
   padding: 8px 20px;
   align-self: flex-end;
-  background-color: #7B9B69;
+  background-color: #25b4ec;
   border:none;
   border-radius: 15px;
   color: white;
@@ -83,7 +83,7 @@
 }
 
 .login__register-link {
-  color: #7B9B69;
+  color: #25b4ec;
   font-size: 12px;
   margin-top: 220px;
   text-align: center;

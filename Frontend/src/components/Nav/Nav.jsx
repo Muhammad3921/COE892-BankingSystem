@@ -33,7 +33,7 @@ function Navbar() {
     <MenuItem onClick={handleClose} component={Link} to={item.path}
     style={{
         fontWeight: location.pathname === item.path ? '600' : '500',
-        color: '#7B9B69'
+        color: '#25b4ec'
         }}>
         {item.name}
     </MenuItem>
@@ -73,9 +73,9 @@ function Navbar() {
                 <Divider />
                 <MenuItem onClick={handleClose} component={Link} to="/login" className='logInButton'
                 style={{
-                    color: '#7B9B69',
+                    color: '#25b4ec',
                     display: 'block',
-                    outline: '1px solid #7B9B69',
+                    outline: '1px solid #25b4ec',
                     borderRadius: '20px',
                     padding: '.15em 1.4em',
                     margin: '1em'
@@ -86,7 +86,7 @@ function Navbar() {
                 style={{
                     color: '#FFF',
                     display: 'block',
-                    backgroundColor: '#7B9B69',
+                    backgroundColor: '#25b4ec',
                     borderRadius: '20px',
                     padding: '.15em 1.4em',
                     margin: '1em'

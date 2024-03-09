@@ -169,11 +169,11 @@ const Profile = () => {
     >
       <Grid container spacing={3} style={{ marginTop: '-110px', transform: 'scale(0.92)', marginLeft: '-180px' }}>
         <Grid item xs={12}>
-          <Typography variant="h4" gutterBottom style={{ color: '#7B9B69', fontSize: '35px', fontWeight: '800', fontFamily: 'Times New Roman', transform: 'translateY(60px)' }}>
+          <Typography variant="h4" gutterBottom style={{ color: '#25b4ec', fontSize: '35px', fontWeight: '800', fontFamily: 'Times New Roman', transform: 'translateY(60px)' }}>
             Hi, {formData.first_name}!
           </Typography>
           <Typography variant="h4" gutterBottom>
-            <Avatar sx={{ width: 150, height: 150, backgroundColor: '#7B9B69', borderRadius: '10%', transform: 'translateY(60px)' }}>
+            <Avatar sx={{ width: 150, height: 150, backgroundColor: '#25b4ec', borderRadius: '10%', transform: 'translateY(60px)' }}>
               <PersonIcon sx={{ fontSize: 120 }} />
             </Avatar>
           </Typography>
@@ -183,9 +183,9 @@ const Profile = () => {
             {isEditing ? (
               <>
                 <Button onClick={handleSave} style={{
-                  border: '1px solid #7B9B69',
+                  border: '1px solid #25b4ec',
                   color: 'white',
-                  backgroundColor: '#7B9B69',
+                  backgroundColor: '#25b4ec',
                   borderRadius: '25px',
                   padding: '8px 15px',
                   cursor: 'pointer',
@@ -196,8 +196,8 @@ const Profile = () => {
                   Save Changes
                 </Button>
                 <Button onClick={handleCancel} style={{
-                  border: '1px solid #7B9B69',
-                  color: '#7B9B69',
+                  border: '1px solid #25b4ec',
+                  color: '#25b4ec',
                   backgroundColor: 'white',
                   borderRadius: '25px',
                   padding: '0px 15px',
@@ -212,10 +212,10 @@ const Profile = () => {
               </>
             ) : (
               <IconButton color="primary" aria-label="edit" onClick={toggleEditing} sx={{ color: 'green', fontSize: '17px', fontWeight: '700', transform: 'translateX(-7px)' }}>
-                <span style={{ color: '#7B9B69' }}>
+                <span style={{ color: '#25b4ec' }}>
                   {isPharmacist ? 'Pharmacist details' : 'Patient details'}
                 </span>
-                <EditTwoToneIcon sx={{ color: '#7B9B69', fontSize: '20px' }} />
+                <EditTwoToneIcon sx={{ color: '#25b4ec', fontSize: '20px' }} />
               </IconButton>
             )}
           </Box>
@@ -235,13 +235,13 @@ const Profile = () => {
                   value={formData.first_name}
                   onChange={handleChange}
                   style={{
-                    borderBottom: '2px solid #7B9B69',
+                    borderBottom: '2px solid #25b4ec',
                     width: '230px',
                   }}
                 />
               </div>
             ) : (
-              <span style={{ color: '#7B9B69', fontSize: '14px', fontWeight: '700' }}>
+              <span style={{ color: '#25b4ec', fontSize: '14px', fontWeight: '700' }}>
                 {formData.first_name}
               </span>
             )}
@@ -263,13 +263,13 @@ const Profile = () => {
                   value={formData.last_name}
                   onChange={handleChange}
                   style={{
-                    borderBottom: '2px solid #7B9B69',
+                    borderBottom: '2px solid #25b4ec',
                     width: '230px',
                   }}
                 />
               </div>
             ) : (
-              <span style={{ color: '#7B9B69', fontSize: '14px', fontWeight: '700' }}>
+              <span style={{ color: '#25b4ec', fontSize: '14px', fontWeight: '700' }}>
                 {formData.last_name}
               </span>
             )}
@@ -282,9 +282,9 @@ const Profile = () => {
                 <button
                   type="button"
                   style={{
-                    border: '1px solid #7B9B69',
-                    color: formData.gender === 'Male' ? 'white' : '#7B9B69',
-                    backgroundColor: formData.gender === 'Male' ? '#7B9B69' : 'white',
+                    border: '1px solid #25b4ec',
+                    color: formData.gender === 'Male' ? 'white' : '#25b4ec',
+                    backgroundColor: formData.gender === 'Male' ? '#25b4ec' : 'white',
                     borderRadius: '25px',
                     padding: '8px 20px',
                     cursor: 'pointer',
@@ -297,9 +297,9 @@ const Profile = () => {
                 <button
                   type="button"
                   style={{
-                    border: '1px solid #7B9B69',
-                    color: formData.gender === 'Female' ? 'white' : '#7B9B69',
-                    backgroundColor: formData.gender === 'Female' ? '#7B9B69' : 'white',
+                    border: '1px solid #25b4ec',
+                    color: formData.gender === 'Female' ? 'white' : '#25b4ec',
+                    backgroundColor: formData.gender === 'Female' ? '#25b4ec' : 'white',
                     borderRadius: '25px',
                     padding: '8px 20px',
                     cursor: 'pointer',
@@ -310,7 +310,7 @@ const Profile = () => {
                 </button>
               </div>
             ) : (
-              <span style={{ color: '#7B9B69', fontSize: '14px', fontWeight: '700' }}>{formData.gender}</span>
+              <span style={{ color: '#25b4ec', fontSize: '14px', fontWeight: '700' }}>{formData.gender}</span>
             )}
           </div>
           <br />
@@ -329,13 +329,13 @@ const Profile = () => {
                   value={formData.date_of_birth}
                   onChange={handleChange}
                   style={{
-                    borderBottom: '2px solid #7B9B69',
+                    borderBottom: '2px solid #25b4ec',
                     width: '230px',
                   }}
                 />
               </div>
             ) : (
-              <span style={{ color: '#7B9B69', fontSize: '14px', fontWeight: '700' }}>
+              <span style={{ color: '#25b4ec', fontSize: '14px', fontWeight: '700' }}>
                 {formData.date_of_birth}
               </span>
             )}
@@ -357,7 +357,7 @@ const Profile = () => {
                   value={formData.email}
                   onChange={handleChange}
                   style={{
-                    borderBottom: '2px solid #7B9B69',
+                    borderBottom: '2px solid #25b4ec',
                     width: '230px',
                   }}
                 />
@@ -377,7 +377,7 @@ const Profile = () => {
                 )}
               </div>
             ) : (
-              <span style={{ color: '#7B9B69', fontSize: '14px', fontWeight: '700' }}>
+              <span style={{ color: '#25b4ec', fontSize: '14px', fontWeight: '700' }}>
                 {formData.email}
               </span>
             )}
@@ -400,13 +400,13 @@ const Profile = () => {
                     value={formData.address}
                     onChange={handleChange}
                     style={{
-                      borderBottom: '2px solid #7B9B69',
+                      borderBottom: '2px solid #25b4ec',
                       width: '230px',
                     }}
                   />
                 </div>
               ) : (
-                <span style={{ color: '#7B9B69', fontSize: '14px', fontWeight: '700' }}>
+                <span style={{ color: '#25b4ec', fontSize: '14px', fontWeight: '700' }}>
                   {formData.address}
                 </span>
               )}
@@ -429,7 +429,7 @@ const Profile = () => {
                     value={formData.license_number}
                     onChange={handleChange}
                     style={{
-                      borderBottom: '2px solid #7B9B69',
+                      borderBottom: '2px solid #25b4ec',
                       width: '230px',
                     }}
                   />
@@ -442,7 +442,7 @@ const Profile = () => {
                   )}
                 </div>
               ) : (
-                <span style={{ color: '#7B9B69', fontSize: '14px', fontWeight: '700' }}>
+                <span style={{ color: '#25b4ec', fontSize: '14px', fontWeight: '700' }}>
                   {formData.license_number}
                 </span>
               )}
@@ -465,13 +465,13 @@ const Profile = () => {
                     value={formData.hire_date}
                     onChange={handleChange}
                     style={{
-                      borderBottom: '2px solid #7B9B69',
+                      borderBottom: '2px solid #25b4ec',
                       width: '230px',
                     }}
                   />
                 </div>
               ) : (
-                <span style={{ color: '#7B9B69', fontSize: '14px', fontWeight: '700' }}>
+                <span style={{ color: '#25b4ec', fontSize: '14px', fontWeight: '700' }}>
                   {formData.hire_date}
                 </span>
               )}
@@ -494,7 +494,7 @@ const Profile = () => {
                   value={formData.phone_number}
                   onChange={handleChange}
                   style={{
-                    borderBottom: '2px solid #7B9B69',
+                    borderBottom: '2px solid #25b4ec',
                     width: '230px',
                   }}
                 />
@@ -507,7 +507,7 @@ const Profile = () => {
                 )}
               </div>
             ) : (
-              <span style={{ color: '#7B9B69', fontSize: '14px', fontWeight: '700' }}>
+              <span style={{ color: '#25b4ec', fontSize: '14px', fontWeight: '700' }}>
                 {formData.phone_number}
               </span>
             )}

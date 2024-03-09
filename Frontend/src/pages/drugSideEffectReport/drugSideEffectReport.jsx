@@ -112,7 +112,7 @@ const DrugSideEffectReport = () => {
                     '.MuiDataGrid-columnHeaders': {
                         fontWeight: '500',
                         fontSize: '1.2em',
-                        color: '#7B9B69'
+                        color: '#25b4ec'
                     }
                   }}
                   rows={medications}

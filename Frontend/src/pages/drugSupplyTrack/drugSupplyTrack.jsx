@@ -29,7 +29,7 @@ const DrugSupplyTracker = () => {
   return (
     <div>
       <div className="green__tile"></div>
-      <Typography variant="h3" style={{ color: '#7B9B69', fontWeight: 'bold', marginBottom: '20px', fontFamily: 'Times New Roman, serif' }}>
+      <Typography variant="h3" style={{ color: '#25b4ec', fontWeight: 'bold', marginBottom: '20px', fontFamily: 'Times New Roman, serif' }}>
         Drug Supply Tracker
       </Typography>
       {medications.map((medication, index) => (
@@ -37,8 +37,8 @@ const DrugSupplyTracker = () => {
           <Card
             style={{
               borderRadius: '50px',
-              backgroundColor: index === 0 ? '#7B9B69' : 'white',
-              color: index === 0 ? 'white' : '#7B9B69',
+              backgroundColor: index === 0 ? '#25b4ec' : 'white',
+              color: index === 0 ? 'white' : '#25b4ec',
               fontFamily: 'Times New Roman, serif',
               transform: 'scale(0.9)',
               width: '420px',
@@ -51,16 +51,16 @@ const DrugSupplyTracker = () => {
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <div
                   style={{
-                    backgroundColor: index === 0 ? '#7B9B69' : 'white',
+                    backgroundColor: index === 0 ? '#25b4ec' : 'white',
                     borderRadius: '50%',
                     padding: '0px',
                   }}
                 >
                   <CiPillsBottle1
                     size={90}
-                    color={index === 0 ? 'white' : '#7B9B69'}
+                    color={index === 0 ? 'white' : '#25b4ec'}
                     style={{
-                      backgroundColor: index === 0 ? '#7B9B69' : 'white',
+                      backgroundColor: index === 0 ? '#25b4ec' : 'white',
                       borderRadius: '50%',
                       padding: '8px',
                       marginTop: '-60px'
@@ -99,7 +99,7 @@ const DrugSupplyTracker = () => {
                     <ArrowForwardIcon
                       style={{
                         fontSize: '35px',
-                        color: index === 0 ? 'white' : '#7B9B69',
+                        color: index === 0 ? 'white' : '#25b4ec',
                       }}
                     />
                   </IconButton>
@@ -114,7 +114,7 @@ const DrugSupplyTracker = () => {
                 <div style={{ borderRadius: '50%', padding: '8px' }}>
                   <CiPillsBottle1
                     size={90}
-                    color="#7B9B69"
+                    color="#25b4ec"
                     style={{ backgroundColor: 'white', borderRadius: '50%', padding: '8px', marginTop: '-130px' }}
                   />
                 </div>
@@ -131,13 +131,13 @@ const DrugSupplyTracker = () => {
                     <span>{new Date(medication.end_recur).toLocaleDateString('en-CA')}</span>
                   </Typography>
                   <Typography variant="body1" style={{ color: '#acacac', marginTop: '10px' }}>
-                    Hospital Name: <span style={{ color: '#7B9B69' }}>{medication.hospital_name}</span>
+                    Hospital Name: <span style={{ color: '#25b4ec' }}>{medication.hospital_name}</span>
                   </Typography>
                   <Typography variant="body1" style={{ color: '#acacac' }}>
-                    Hospital Address: <span style={{ color: '#7B9B69' }}>{medication.hospital_address}</span>
+                    Hospital Address: <span style={{ color: '#25b4ec' }}>{medication.hospital_address}</span>
                   </Typography>
                   <Typography variant="body1" style={{ color: '#acacac' }}>
-                    Doctor Name: <span style={{ color: '#7B9B69' }}>{medication.doctor_name}</span>
+                    Doctor Name: <span style={{ color: '#25b4ec' }}>{medication.doctor_name}</span>
                   </Typography>
                 </div>
               </div>
