@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
 
     // Check if a user with the same email already exists
     const checkEmailQuery =
-      'SELECT email FROM patient WHERE email = $1 UNION SELECT email FROM pharmacist WHERE email = $1 UNION SELECT email FROM users WHERE email = $1';
+      'SELECT email FROM users WHERE email = $1';
     const existingUser = await db.query(checkEmailQuery, [email]);
 
     if (existingUser.rows.length !== 0) {

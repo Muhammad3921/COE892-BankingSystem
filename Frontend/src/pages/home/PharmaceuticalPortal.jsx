@@ -10,11 +10,11 @@ const PharmaceuticalPortal = () => {
     <Grid container spacing={8} className='pharma-container'>
       <Grid item lg={5} className='content'>
           <div className='text-container'>
-            <h1 className="message-text">Discover a community that supports you in your pharmaceutical journey.</h1>
-            <p className="slogan-text">Connect. Share. Learn Together.</p>         
+            <h1 className="message-text">Discover how you can save money with us.</h1>
+            <p className="slogan-text">Connect. Share. Save Together.</p>         
           </div>
           <Button component={Link} to="/signup" id='getHelpButton'>
-            Get Help Today
+            Get Started Today
           </Button>
       </Grid>
       <Grid item lg={7} className='image-container'>

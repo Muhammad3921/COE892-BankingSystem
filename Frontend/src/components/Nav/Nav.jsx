@@ -45,7 +45,7 @@ function Navbar() {
       <div className="left-nav">
         <Logo id='logo'/>
         <Button component={Link} to="/" id='logoButton'>
-          Pharmaceutical Portal
+          Banking Portal
         </Button>
       </div>
       <div className="right-nav" style={{ display: 'flex', alignItems: 'center' }}>

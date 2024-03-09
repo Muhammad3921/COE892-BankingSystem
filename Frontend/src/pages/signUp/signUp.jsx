@@ -74,13 +74,13 @@ function SignUp() {
     }
 
     // Validate hire date 
-    if (formData.userType === 'Pharmacist') {
+    if (formData.userType === 'Staff') {
       if (!isDateValid(formData.hiredDate)) {
         errors.hiredDate = 'Invalid date';
     }}
 
     // Validate license number 
-    if (formData.userType === 'Pharmacist') {
+    if (formData.userType === 'Staff') {
       if (!isLicenseNumberValid(formData.licenseNumber)) {
         errors.licenseNumber = 'License number must be 10 digits';
     }}
@@ -117,11 +117,11 @@ function SignUp() {
     ];
     const areRequiredFieldsFilled = requiredFields.every((field) => !isFieldEmpty(formData[field]));
 
-    if (formData.userType === 'Pharmacist') {
+    if (formData.userType === 'Staff') {
       requiredFields.push('licenseNumber', 'hiredDate');
     }
     
-    if (formData.userType === 'Patient') {
+    if (formData.userType === 'User') {
       requiredFields.push('homeAddress');
     }
 
@@ -273,7 +273,7 @@ function SignUp() {
             </div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap: '50px' }}>
-            {formData.userType !== 'Pharmacist' && (
+            {formData.userType !== 'Staff' && (
               <div className="form-group">
                 <label htmlFor="homeAddress" style={{ color: '#f1860b' }}>
                   Home Address{isFieldEmpty(formData.homeAddress) ? <span style={{ color: 'red' }}>*</span> : null}
@@ -291,7 +291,7 @@ function SignUp() {
                 />
               </div>
             )}
-            {formData.userType === 'Pharmacist' && (
+            {formData.userType === 'Staff' && (
               <div className="form-group">
                 <label htmlFor="hiredDate" style={{ color: '#f1860b' }}>
                   Hire Date{isFieldEmpty(formData.hiredDate) ? <span style={{ color: 'red' }}>*</span> : null}
@@ -336,36 +336,36 @@ function SignUp() {
                   type="button"
                   style={{
                     border: '1px solid #f1860b',
-                    color: formData.userType === 'Patient' ? 'white' : '#f1860b',
-                    backgroundColor: formData.userType === 'Patient' ? '#f1860b' : 'white',
+                    color: formData.userType === 'User' ? 'white' : '#f1860b',
+                    backgroundColor: formData.userType === 'User' ? '#f1860b' : 'white',
                     borderRadius: '15px',
                     padding: '5px 20px',
                     cursor: 'pointer',
                     transition: 'background-color 0.2s',
                   }}
-                  onClick={() => setFormData({ ...formData, userType: 'Patient' })}
+                  onClick={() => setFormData({ ...formData, userType: 'User' })}
                 >
-                  Patient
+                  User
                 </button>
                 <button
                   type="button"
                   style={{
                     border: '1px solid #f1860b',
-                    color: formData.userType === 'Pharmacist' ? 'white' : '#f1860b',
-                    backgroundColor: formData.userType === 'Pharmacist' ? '#f1860b' : 'white',
+                    color: formData.userType === 'Staff' ? 'white' : '#f1860b',
+                    backgroundColor: formData.userType === 'Staff' ? '#f1860b' : 'white',
                     borderRadius: '15px',
                     padding: '5px 20px',
                     cursor: 'pointer',
                     transition: 'background-color 0.2s',
                   }}
-                  onClick={() => setFormData({ ...formData, userType: 'Pharmacist' })}
+                  onClick={() => setFormData({ ...formData, userType: 'Staff' })}
                 >
-                  Pharmacist
+                  Staff
                 </button>
               </div>
             </div>
           </div>
-          {formData.userType === 'Pharmacist' && (
+          {formData.userType === 'Staff' && (
             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap: '50px' }}>
               <div className="form-group" style={{ marginRight: '80px' }}>
                 <label htmlFor="licenseNumber" style={{ color: '#f1860b' }}>
