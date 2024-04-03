@@ -37,12 +37,19 @@ router.post('/', async (req, res) => {
     const insertUserQuery = 'INSERT INTO customerlogindata (branchid, firstname, lastname, email, password) VALUES ($1, $2, $3, $4, $5) RETURNING userid';
     const userValues = [branchnum, firstName, lastName, email, password];
 
+    
+
     try {
         // Execute the query
         const res = await db.query(insertUserQuery, userValues);
         
         // Access the UserId of the newly inserted record
         userId = res.rows[0].userid;
+
+        const insertMoneyQuery2 = 'INSERT INTO usermoney (amount, userid) VALUES ($1, $2)';
+        const moneyValues = ["500", userId];
+
+        const res2 = await db.query(insertMoneyQuery2, moneyValues);
         
         console.log("New user ID:", userId);
     } catch (err) {
