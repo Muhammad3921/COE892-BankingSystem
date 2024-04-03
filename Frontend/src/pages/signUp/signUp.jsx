@@ -8,6 +8,7 @@ function SignUp() {
     firstName: '',
     lastName: '',
     gender: '',
+    branchnum: '',
     homeAddress: '',
     dateOfBirth: '',
     phone: '',
@@ -36,20 +37,11 @@ function SignUp() {
     return emailPattern.test(email);
   };
 
-  const isLicenseNumberValid = (licenseNumber) => {
-    const licenseNumberPattern = /^\d{10}$/;
-    return licenseNumberPattern.test(licenseNumber);
-  };
-
   const isPhoneNumberValid = (phone) => {
     const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
     return phonePattern.test(phone);
   };
 
-  const isDateValid = (dateOfBirth) => {
-    const datePattern = /^(?:19|20)\d\d\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])$/;
-    return datePattern.test(dateOfBirth);
-  };
   
   const isPasswordValid = (password) => {
     return password.length >= 8;
@@ -68,23 +60,6 @@ function SignUp() {
       errors.email = 'Invalid email address';
     }
    
-    // Validate date of birth
-    if (!isDateValid(formData.dateOfBirth)) {
-      errors.dateOfBirth = 'Invalid date of birth';
-    }
-
-    // Validate hire date 
-    if (formData.userType === 'Staff') {
-      if (!isDateValid(formData.hiredDate)) {
-        errors.hiredDate = 'Invalid date';
-    }}
-
-    // Validate license number 
-    if (formData.userType === 'Staff') {
-      if (!isLicenseNumberValid(formData.licenseNumber)) {
-        errors.licenseNumber = 'License number must be 10 digits';
-    }}
-
     // Validate password
     if (!isPasswordValid(formData.password)) {
       errors.password = 'Password must be 8 characters minimum';
@@ -107,26 +82,16 @@ function SignUp() {
     const requiredFields = [
       'firstName',
       'lastName',
-      'gender',
-      'dateOfBirth',
-      'phone',
       'email',
-      'userType',
       'password',
       'confirmPassword',
     ];
     const areRequiredFieldsFilled = requiredFields.every((field) => !isFieldEmpty(formData[field]));
 
-    if (formData.userType === 'Staff') {
-      requiredFields.push('licenseNumber', 'hiredDate');
-    }
-    
-    if (formData.userType === 'User') {
-      requiredFields.push('homeAddress');
-    }
-
+    console.log(areRequiredFieldsFilled)
     if (areRequiredFieldsFilled) {
       if (validateForm()) {
+        console.log("akoo")
         try {
           const response = await fetch('/signup', {
             method: 'POST',
@@ -137,6 +102,7 @@ function SignUp() {
           });
 
           if (response.ok) {
+            console.log("await")
             setFormData({
               firstName: '',
               lastName: '',
@@ -155,6 +121,7 @@ function SignUp() {
             setSuccessMessage('Registration successful!');
           
           } else {
+            console.log("awair")
             const data = await response.json();
             if (data.error) {
               setErrorMessage(data.error);
@@ -273,120 +240,6 @@ function SignUp() {
             </div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap: '50px' }}>
-            {formData.userType !== 'Staff' && (
-              <div className="form-group">
-                <label htmlFor="homeAddress" style={{ color: '#f1860b' }}>
-                  Home Address{isFieldEmpty(formData.homeAddress) ? <span style={{ color: 'red' }}>*</span> : null}
-                </label>
-                <input
-                  type="text"
-                  id="homeAddress"
-                  name="homeAddress"
-                  placeholder="1 Smith Road"
-                  value={formData.homeAddress}
-                  onChange={handleChange}
-                  style={{
-                    borderBottom: '2px solid #f1860b',
-                  }}
-                />
-              </div>
-            )}
-            {formData.userType === 'Staff' && (
-              <div className="form-group">
-                <label htmlFor="hiredDate" style={{ color: '#f1860b' }}>
-                  Hire Date{isFieldEmpty(formData.hiredDate) ? <span style={{ color: 'red' }}>*</span> : null}
-                </label>
-                <input
-                  type="text"
-                  id="hiredDate"
-                  name="hiredDate"
-                  placeholder="YYYY/MM/DD"
-                  value={formData.hiredDate}
-                  onChange={handleChange}
-                  style={{
-                    borderBottom: '2px solid #f1860b',
-                  }}
-                />
-                {validationErrors.hiredDate && <p style={{ color: 'red', fontSize: '11px', marginTop: '-5px' }}>{validationErrors.hiredDate}</p>}
-              </div>
-            )}
-            <div className="form-group">
-              <label htmlFor="dateOfBirth" style={{ color: '#f1860b' }}>
-                Date of Birth{isFieldEmpty(formData.dateOfBirth) ? <span style={{ color: 'red' }}>*</span> : null}
-              </label>
-              <input
-                type="text"
-                id="dateOfBirth"
-                name="dateOfBirth"
-                placeholder="YYYY/MM/DD"
-                value={formData.dateOfBirth}
-                onChange={handleChange}
-                style={{
-                  borderBottom: '2px solid #f1860b',
-                }}
-              />
-              {validationErrors.dateOfBirth && <p style={{ color: 'red', fontSize: '11px', marginTop: '-5px' }}>{validationErrors.dateOfBirth}</p>}
-            </div>
-            <div className="form-group">
-              <label htmlFor="userType" style={{ color: '#f1860b' }}>
-                User Type{isFieldEmpty(formData.userType) ? <span style={{ color: 'red' }}>*</span> : null}
-              </label>
-              <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap: '5px' }}>
-                <button
-                  type="button"
-                  style={{
-                    border: '1px solid #f1860b',
-                    color: formData.userType === 'User' ? 'white' : '#f1860b',
-                    backgroundColor: formData.userType === 'User' ? '#f1860b' : 'white',
-                    borderRadius: '15px',
-                    padding: '5px 20px',
-                    cursor: 'pointer',
-                    transition: 'background-color 0.2s',
-                  }}
-                  onClick={() => setFormData({ ...formData, userType: 'User' })}
-                >
-                  User
-                </button>
-                <button
-                  type="button"
-                  style={{
-                    border: '1px solid #f1860b',
-                    color: formData.userType === 'Staff' ? 'white' : '#f1860b',
-                    backgroundColor: formData.userType === 'Staff' ? '#f1860b' : 'white',
-                    borderRadius: '15px',
-                    padding: '5px 20px',
-                    cursor: 'pointer',
-                    transition: 'background-color 0.2s',
-                  }}
-                  onClick={() => setFormData({ ...formData, userType: 'Staff' })}
-                >
-                  Staff
-                </button>
-              </div>
-            </div>
-          </div>
-          {formData.userType === 'Staff' && (
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap: '50px' }}>
-              <div className="form-group" style={{ marginRight: '80px' }}>
-                <label htmlFor="licenseNumber" style={{ color: '#f1860b' }}>
-                  License Number{isFieldEmpty(formData.licenseNumber) ? <span style={{ color: 'red' }}>*</span> : null}
-                </label>
-                <input
-                  type="text"
-                  id="licenseNumber"
-                  name="licenseNumber"
-                  placeholder="1234567895"
-                  value={formData.licenseNumber}
-                  onChange={handleChange}
-                  style={{
-                    borderBottom: '2px solid #f1860b',
-                  }}
-                />
-                {validationErrors.licenseNumber && <p style={{ color: 'red', fontSize: '11px', marginTop: '-5px' }}>{validationErrors.licenseNumber}</p>}
-              </div>
-            </div>
-          )}
-          <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap: '50px' }}>
             <div className="form-group">
               <label htmlFor="phone" style={{ color: '#f1860b' }}>
                 Phone{isFieldEmpty(formData.phone) ? <span style={{ color: 'red' }}>*</span> : null}
@@ -465,6 +318,60 @@ function SignUp() {
                 }}
               />
               {validationErrors.confirmPassword && <p style={{ color: 'red', fontSize:'11px', marginTop: '-5px' }}>{validationErrors.confirmPassword}</p>}
+            </div>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap: '50px' }}>
+          <div className="form-group">
+              <label htmlFor="Branch" style={{ color: '#f1860b' }}>
+                Branch #{isFieldEmpty(formData.branchnum) ? <span style={{ color: 'red' }}>*</span> : null}
+              </label>
+              <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', gap: '5px' }}>
+                <button
+                  type="button"
+                  style={{
+                    border: '1px solid #f1860b',
+                    color: formData.branchnum === '1' ? 'white' : '#f1860b',
+                    backgroundColor: formData.branchnum === '1' ? '#f1860b' : 'white',
+                    borderRadius: '15px',
+                    padding: '5px 20px',
+                    cursor: 'pointer',
+                    transition: 'background-color 0.2s',
+                  }}
+                  onClick={() => setFormData({ ...formData, branchnum: '1' })}
+                >
+                  Branch1
+                </button>
+                <button
+                  type="button"
+                  style={{
+                    border: '1px solid #f1860b',
+                    color: formData.branchnum === '2' ? 'white' : '#f1860b',
+                    backgroundColor: formData.branchnum === '2' ? '#f1860b' : 'white',
+                    borderRadius: '15px',
+                    padding: '5px 20px',
+                    cursor: 'pointer',
+                    transition: 'background-color 0.2s',
+                  }}
+                  onClick={() => setFormData({ ...formData, branchnum: '2' })}
+                >
+                  Branch2
+                </button>
+                <button
+                  type="button"
+                  style={{
+                    border: '1px solid #f1860b',
+                    color: formData.branchnum === '3' ? 'white' : '#f1860b',
+                    backgroundColor: formData.branchnum === '3' ? '#f1860b' : 'white',
+                    borderRadius: '15px',
+                    padding: '5px 20px',
+                    cursor: 'pointer',
+                    transition: 'background-color 0.2s',
+                  }}
+                  onClick={() => setFormData({ ...formData, branchnum: '3' })}
+                >
+                  Branch3
+                </button>
+              </div>
             </div>
           </div>
         </div>

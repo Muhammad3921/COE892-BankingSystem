@@ -8,15 +8,15 @@ import Contact from './pages/contact/contact';
 import SignUp from './pages/signUp/signUp';
 import Login from './pages/login/login';
 import LogOut from './pages/logout/logout';
-import Profile from './pages/profile/profile';
+//import Profile from './pages/profile/profile';
 import PharmaceuticalPortal from './pages/home/PharmaceuticalPortal';
 import PharmaceuticalPortalLog from './pages/home-loggedin/PharmaceuticalPortalLog';
 import './App.css';
-import Scheduler from './pages/scheduler/scheduler';
-import PrescriptionSubmit from './pages/prescription-submit/prescriptionsubmit';
-import DrugInteractionChecker from './pages/drugInteractionChecker/drugInteractionChecker';
-import DrugSupplyTracker from './pages/drugSupplyTrack/drugSupplyTrack';
-import DrugSideEffectReport from './pages/drugSideEffectReport/drugSideEffectReport';
+// import Scheduler from './pages/scheduler/scheduler';
+// import PrescriptionSubmit from './pages/prescription-submit/prescriptionsubmit';
+// import DrugInteractionChecker from './pages/drugInteractionChecker/drugInteractionChecker';
+// import DrugSupplyTracker from './pages/drugSupplyTrack/drugSupplyTrack';
+// import DrugSideEffectReport from './pages/drugSideEffectReport/drugSideEffectReport';
 import PrivateRoute from './privateroute';
 import UnPrivateRoute from './unprivateroute';
 import LogOutPrivateRoute from './logoutprivateroute';
@@ -71,7 +71,7 @@ function App() {
         <Route exact path='/login' element={<UnPrivateRoute/>}>
           <Route exact path='/login' element={<Login/>} />
         </Route>
-        <Route exact path='/profile' element={<PrivateRoute/>}>
+        {/* <Route exact path='/profile' element={<PrivateRoute/>}>
           <Route exact path='/profile' element={<Profile/>} />
         </Route>
         <Route exact path='/scheduler' element={<PrivateRoute/>}>
@@ -88,7 +88,7 @@ function App() {
         </Route>
         <Route exact path='/side-effect-report' element={<PrivateRoute/>}>
           <Route exact path='/side-effect-report' element={<DrugSideEffectReport/>} />
-        </Route>
+        </Route> */}
         <Route exact path='/logout' element={<LogOutPrivateRoute/>}>
           <Route exact path='/logout' element={<LogOut/>} />
         </Route>
