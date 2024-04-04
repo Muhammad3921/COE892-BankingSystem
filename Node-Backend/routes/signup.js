@@ -35,7 +35,7 @@ router.post('/', async (req, res) => {
 
 
     const insertUserQuery = 'INSERT INTO customerlogindata (branchid, firstname, lastname, email, password) VALUES ($1, $2, $3, $4, $5) RETURNING userid';
-    const userValues = [branchnum, firstName, lastName, email, password];
+    const userValues = [branchnum, firstName, lastName, email.toLowerCase(), password];
 
     
 

@@ -68,13 +68,31 @@ function Login() {
             setValidationErrors({});
             setErrorMessage(null); 
             console.log(data.datatosend)
-            sessionStorage.setItem('token', data.datatosend.token)
-            sessionStorage.setItem('userId', data.datatosend.id.toString());
-            sessionStorage.setItem('Name', data.datatosend.Name.toString());
-            navigate('/home')
-            window.location.reload();
+            if(!data.datatosend.name && !data.datatosend.id){
+              console.log("ingere")
+              sessionStorage.setItem('token', data.datatosend.token)
+              sessionStorage.setItem('userId', "");
+              sessionStorage.setItem('Name', "Branch " +  data.datatosend.branchid.toString());
+              sessionStorage.setItem('BranchId', data.datatosend.branchid.toString());
+              sessionStorage.setItem('email', data.datatosend.email.toString());
+              sessionStorage.setItem('amount', data.datatosend.amount.toString());
+              navigate('/home') //change to branch logged in page
+              window.location.reload();
+            }else{
+              sessionStorage.setItem('token', data.datatosend.token)
+              sessionStorage.setItem('userId', data.datatosend.id.toString());
+              sessionStorage.setItem('Name', data.datatosend.Name.toString());
+              sessionStorage.setItem('BranchId', data.datatosend.branchid.toString());
+              sessionStorage.setItem('email', data.datatosend.email.toString());
+              sessionStorage.setItem('amount', data.datatosend.amount.toString());
+              navigate('/home')
+              window.location.reload();
+            }
+
           } else {
+            console.log("resop no ok")
             const data = await response.json();
+            console.log("resop no ok2")
             if (data.error) {
               setErrorMessage(data.error);
             } else {
@@ -95,9 +113,14 @@ function Login() {
     <div className="login-container">
       <div className="login-content">
         <p className="login__subtitle">Good to see you again!</p>
-
+        {errorMessage && (
+                <p style={{ color: 'red',  fontSize: '11px', marginTop: '-5px' }}>
+                  {errorMessage}
+                </p>
+              )}
         <form onSubmit={handleSubmit} className="login__form">
           <div className="login__form-group">
+              
             <input
               type="text"
               id="email"
