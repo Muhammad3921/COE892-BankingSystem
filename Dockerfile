@@ -1,8 +1,8 @@
-# Switch to a Python base image
+# Use the official Python image as the base image
 FROM python:latest
 
-# Set the working directory for the Python script
-WORKDIR /COE892-BankingSystem/
+# Set the working directory inside the container
+WORKDIR /
 
 # Copy the requirements.txt file into the container
 COPY requirements.txt .
@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of your application code into the container
-COPY PythonServer.py .
+COPY . .
 
 # Command to run the Python script
 CMD ["python", "PythonServer.py"]
