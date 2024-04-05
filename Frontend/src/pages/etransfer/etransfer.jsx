@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Alert } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './etransfer.css';
 
 function Etransfer() {
+
+  let navigate = useNavigate();
+
+  function handleBack() {
+    navigate(-1); // This will take you back to the previous page in the history stack
+  }
 
   const [formData, setFormData] = useState({
     from: sessionStorage.getItem("userId"),
@@ -74,7 +80,8 @@ function Etransfer() {
             setErrorMessage(null); 
             setSuccessMessage('Money sent successfully!');
             const data = await response.json();
-            sessionStorage.setItem('newamount', data.amount.toString());
+            console.log()
+            sessionStorage.setItem('amount', data.newAmount.toString());
           } else {
             console.log("awair")
             const data = await response.json();
@@ -90,7 +97,7 @@ function Etransfer() {
       }
     } else {
       const requiredFieldErrors = {};
-      setValidationErrors(requiredFieldErrors);
+      setErrorMessage("Required fields empty");
     }
   };
 
@@ -212,9 +219,9 @@ function Etransfer() {
         step="0.01" // Allow decimal values for cents
       />
       {validationErrors.amount && <p style={{ color: 'red', fontSize: '11px', marginTop: '-5px' }}>{validationErrors.amount}</p>}
-    </div>
-  </div>
-</div>
+        </div>
+      </div>
+      </div>
 
         <button
           className="submit"
@@ -232,7 +239,25 @@ function Etransfer() {
         >
           Send
         </button>
+        <button
+      className="submit"
+      type="button" // Change the type to "button" if it's not submitting a form
+      onClick={handleBack}
+      style={{
+        width: '15%',
+        color: 'white',
+        backgroundColor: '#f1860b',
+        borderRadius: '15px',
+        padding: '12px 20px',
+        margin: '0px',
+        display: 'block',
+        marginTop: '26px',
+      }}
+    >
+      Back
+    </button>
       </form>
+      
     </div>
   );  
 }
