@@ -17,10 +17,11 @@ import "./App.css";
 // import DrugInteractionChecker from './pages/drugInteractionChecker/drugInteractionChecker';
 // import DrugSupplyTracker from './pages/drugSupplyTrack/drugSupplyTrack';
 // import DrugSideEffectReport from './pages/drugSideEffectReport/drugSideEffectReport';
-import PrivateRoute from "./privateroute";
-import UnPrivateRoute from "./unprivateroute";
-import LogOutPrivateRoute from "./logoutprivateroute";
+import PrivateRoute from './privateroute';
+import UnPrivateRoute from './unprivateroute';
+import LogOutPrivateRoute from './logoutprivateroute';
 import BranchHome from "./pages/home-branch-loggedin/BranchHome";
+import Etransfer from './pages/etransfer/etransfer'
 import TransactionHistory from "./pages/transactionHistory/transactionHistory";
 
 function isAuth() {
@@ -65,8 +66,11 @@ function App() {
         <Route exact path="/login" element={<UnPrivateRoute />}>
           <Route exact path="/login" element={<Login />} />
         </Route>
-        <Route exact path="/transactionHistory" element={<PrivateRoute />}>
-          <Route exact path="/transactionHistory" element={<TransactionHistory />} />
+        <Route exact path='/etransfer' element={<PrivateRoute/>}>
+          <Route exact path='/etransfer' element={<Etransfer/>} />
+        </Route>
+        <Route exact path='/transactionHistory' element={<PrivateRoute/>}>
+          <Route exact path='/transactionHistory' element={<TransactionHistory/>} />
         </Route>
         {/* <Route exact path='/profile' element={<PrivateRoute/>}>
           <Route exact path='/profile' element={<Profile/>} />
