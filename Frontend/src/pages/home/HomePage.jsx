@@ -3,9 +3,9 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
-import './PharmaceuticalPortal.css';
+import './HomePage.css';
 
-const PharmaceuticalPortal = () => {
+const HomePage = () => {
   return (
     <Grid container spacing={8} className='pharma-container'>
       <Grid item lg={5} className='content'>
@@ -24,4 +24,4 @@ const PharmaceuticalPortal = () => {
   );
 }
 
-export default PharmaceuticalPortal;
+export default HomePage;

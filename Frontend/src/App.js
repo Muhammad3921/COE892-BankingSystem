@@ -9,7 +9,7 @@ import SignUp from "./pages/signUp/signUp";
 import Login from "./pages/login/login";
 import LogOut from "./pages/logout/logout";
 //import Profile from './pages/profile/profile';
-import PharmaceuticalPortal from "./pages/home/PharmaceuticalPortal";
+import HomePage from "./pages/home/HomePage";
 import Home from "./pages/home-loggedin/Home";
 import "./App.css";
 // import Scheduler from './pages/scheduler/scheduler';
@@ -58,7 +58,7 @@ function App() {
           <Route exact path="/home" element={<DynamicHomeRoute />} />
         </Route>
         <Route exact path="/" element={<UnPrivateRoute />}>
-          <Route exact path="/" element={<PharmaceuticalPortal />} />
+          <Route exact path="/" element={<HomePage />} />
         </Route>
         <Route exact path="/about" element={<UnPrivateRoute />}>
           <Route exact path="/about" element={<About />} />
