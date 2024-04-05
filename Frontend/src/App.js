@@ -18,6 +18,7 @@ import './App.css';
 // import DrugSupplyTracker from './pages/drugSupplyTrack/drugSupplyTrack';
 // import DrugSideEffectReport from './pages/drugSideEffectReport/drugSideEffectReport';
 import PrivateRoute from './privateroute';
+import Etransfer from './pages/etransfer/etransfer'
 import UnPrivateRoute from './unprivateroute';
 import LogOutPrivateRoute from './logoutprivateroute';
 
@@ -70,6 +71,9 @@ function App() {
         </Route>
         <Route exact path='/login' element={<UnPrivateRoute/>}>
           <Route exact path='/login' element={<Login/>} />
+        </Route>
+        <Route exact path='/etransfer' element={<PrivateRoute/>}>
+          <Route exact path='/etransfer' element={<Etransfer/>} />
         </Route>
         {/* <Route exact path='/profile' element={<PrivateRoute/>}>
           <Route exact path='/profile' element={<Profile/>} />
