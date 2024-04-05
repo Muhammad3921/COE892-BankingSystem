@@ -85,7 +85,7 @@ function Login() {
                 "amount",
                 data.datatosend.amount.toString()
               );
-              navigate("/home-branch"); //change to branch logged in page
+              navigate("/home"); //change to branch logged in page
               window.location.reload();
             } else {
               sessionStorage.setItem("token", data.datatosend.token);

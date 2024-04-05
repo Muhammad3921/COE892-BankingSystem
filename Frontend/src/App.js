@@ -17,15 +17,24 @@ import "./App.css";
 // import DrugInteractionChecker from './pages/drugInteractionChecker/drugInteractionChecker';
 // import DrugSupplyTracker from './pages/drugSupplyTrack/drugSupplyTrack';
 // import DrugSideEffectReport from './pages/drugSideEffectReport/drugSideEffectReport';
-import PrivateRoute from './privateroute';
-import UnPrivateRoute from './unprivateroute';
-import LogOutPrivateRoute from './logoutprivateroute';
+import PrivateRoute from "./privateroute";
+import UnPrivateRoute from "./unprivateroute";
+import LogOutPrivateRoute from "./logoutprivateroute";
 import BranchHome from "./pages/home-branch-loggedin/BranchHome";
-import Etransfer from './pages/etransfer/etransfer'
+import Etransfer from "./pages/etransfer/etransfer";
 import TransactionHistory from "./pages/transactionHistory/transactionHistory";
 
 function isAuth() {
   return sessionStorage.getItem("token");
+}
+
+function DynamicHomeRoute() {
+  const userId = sessionStorage.getItem("userId");
+  if (userId) {
+    return <Home />;
+  } else {
+    return <BranchHome />;
+  }
 }
 
 function App() {
@@ -40,16 +49,13 @@ function App() {
       })()}
 
       {(() => {
-        if (isAuth() !== null && sessionStorage.getItem("userId") !== '') {
+        if (isAuth() !== null && sessionStorage.getItem("userId") !== "") {
           return <SidePanel />;
         }
       })()}
       <Routes>
         <Route exact path="/home" element={<PrivateRoute />}>
-          <Route exact path="/home" element={<Home />} />
-        </Route>
-        <Route exact path="/home-branch" element={<PrivateRoute />}>
-          <Route exact path="/home-branch" element={<BranchHome />} />
+          <Route exact path="/home" element={<DynamicHomeRoute />} />
         </Route>
         <Route exact path="/" element={<UnPrivateRoute />}>
           <Route exact path="/" element={<PharmaceuticalPortal />} />
@@ -66,11 +72,15 @@ function App() {
         <Route exact path="/login" element={<UnPrivateRoute />}>
           <Route exact path="/login" element={<Login />} />
         </Route>
-        <Route exact path='/etransfer' element={<PrivateRoute/>}>
-          <Route exact path='/etransfer' element={<Etransfer/>} />
+        <Route exact path="/etransfer" element={<PrivateRoute />}>
+          <Route exact path="/etransfer" element={<Etransfer />} />
         </Route>
-        <Route exact path='/transactionHistory' element={<PrivateRoute/>}>
-          <Route exact path='/transactionHistory' element={<TransactionHistory/>} />
+        <Route exact path="/transactionHistory" element={<PrivateRoute />}>
+          <Route
+            exact
+            path="/transactionHistory"
+            element={<TransactionHistory />}
+          />
         </Route>
         {/* <Route exact path='/profile' element={<PrivateRoute/>}>
           <Route exact path='/profile' element={<Profile/>} />
