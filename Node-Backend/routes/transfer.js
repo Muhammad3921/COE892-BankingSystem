@@ -12,8 +12,6 @@ router.post('/', async (req, res) => {
         branchid
       } = req.body;
 
-      
-
       // Start transaction
       await db.query('BEGIN');
   

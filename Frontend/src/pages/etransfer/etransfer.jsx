@@ -116,6 +116,7 @@ function Etransfer() {
   useEffect(() => {
     async function fetchUsers() {
       try {
+        console.log(formData)
         const response = await fetch(`/getusers?name=${sessionStorage.getItem("userId")}`, {
           method: 'GET',
           headers: {
@@ -131,6 +132,7 @@ function Etransfer() {
             from: sessionStorage.getItem("userId"),
             to: '',
             amount: '',
+            branchid: sessionStorage.getItem("BranchId"),
           });
           setValidationErrors({});
           setErrorMessage(null);
