@@ -50,12 +50,51 @@ router.post('/', async (req, res) => {
       const newSenderAmountResult = await db.query('SELECT amount FROM usermoney WHERE userid = $1', [from]);
       const newSenderAmount = newSenderAmountResult.rows[0].amount;
   
+      const senderFirstNameQuery = await db.query('SELECT firstname FROM customerlogindata WHERE userid = $1', [from]);
+      const senderLastNameQuery = await db.query('SELECT lastname FROM customerlogindata WHERE userid = $1', [from]);
+      const senderFirstName = senderFirstNameQuery.rows[0]?.firstname;
+      const senderLastName = senderLastNameQuery.rows[0]?.lastname;
+
+      const senderResult = `${senderFirstName} ${senderLastName}`;
+
+      const userOrigin = senderResult;
+      
+      const branchOrigin = branchid;
+      const userDestination = to;
+      
+      const branchDestinationQuery = await db.query('SELECT branchid FROM customerlogindata WHERE firstname = $1 AND lastname = $2', [firstName, lastName]);
+      const branchDestination = branchDestinationQuery.rows[0]?.branchid;
+
+      
+      const amqp = require('amqplib');
+      // RabbitMQ connection URL
+      const rabbitmqUrl = 'amqp://guest:guest@20.175.172.243:5672/';
+
+      const message = parseMessage(userOrigin, branchOrigin, amount, userDestination, branchDestination)
+
+      const connection = await amqp.connect(rabbitmqUrl);
+      const channel = await connection.createChannel();
+      const queueName = 'messageQueue';
+      await channel.assertQueue(queueName, { durable: false });
+      channel.sendToQueue(queueName, Buffer.from(JSON.stringify(message)));
+      console.log(" [x] Sent message:", message);
+
       res.json({ newAmount: newSenderAmount });
   
     } catch (error) {
       // If any of the above operations fail, rollback the transaction
       await db.query('ROLLBACK');
       res.status(400).json({ error1: error.message });
+    }
+
+    function parseMessage(sender, senderBranch, amount, receiver, receiverBranch) {
+      return {
+        userOrigin: sender,
+        branchOrigin: senderBranch,
+        amount: parseInt(amount),
+        userDestination: receiver,
+        branchDestination: receiverBranch
+      };
     }
   //   // Check if a user with the same email already exists
   //   const checkEmailQuery =
