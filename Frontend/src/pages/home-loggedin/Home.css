@@ -1,0 +1,118 @@
+body {
+  overflow-x: hidden;
+}
+
+.pharma-container {
+  font-family: "Playfair Display";
+}
+
+.message-text {
+  font-size: 3.4em;
+  font-weight: 600;
+  color: black;
+}
+
+.slogan-text {
+  font-size: 2em;
+  font-weight: 500;
+  color: #f1860b;
+}
+
+.bank-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.balance-container {
+  color: #f1860b;
+  border: 2px solid lightgray;
+  width: 50%;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.balance {
+  font-size: 2em;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 0; /* Add this line to remove the bottom margin */
+}
+
+.balance-text {
+  font-size: 1em;
+  color: #000;
+  margin-top: 0; /* Add this line to remove the top margin */
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+}
+
+#getHelpButton {
+  color: #fff;
+  font-family: "Montserrat";
+  font-weight: 300;
+  background-color: #f1860b;
+  border-radius: 20px;
+  padding: 0.4em 1.4em;
+  text-transform: none;
+}
+
+div .image {
+  background-color: #f1860b;
+  margin-top: 2em;
+  height: 50em;
+  width: 100em;
+  border-radius: 50px 0px 0px 50px;
+}
+
+@media screen and (max-width: 1199px) {
+  .text-container {
+    font-size: 0.8em;
+  }
+
+  div .image {
+    margin-top: 0;
+    height: 40em;
+    border-radius: 40px;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .text-container {
+    font-size: 0.7em;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  div .image-container {
+    margin: auto;
+  }
+
+  div .image {
+    width: 50em;
+    height: 30em;
+    border-radius: 30px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .text-container {
+    font-size: 0.6em;
+  }
+
+  #getHelpButton {
+    font-size: 0.8em;
+  }
+
+  div .image {
+    width: 30em;
+    height: 30em;
+    border-radius: 20px;
+  }
+}
