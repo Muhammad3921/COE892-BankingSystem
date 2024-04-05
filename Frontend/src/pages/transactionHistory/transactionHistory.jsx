@@ -37,7 +37,7 @@ const TransactionHistory = () => {
             </div>
           </div>
           <div className="transaction-container">
-            <h2 className="transaction-heading">Your Branch Transactions</h2>
+            <h2  className="transaction-heading">Your Transactions</h2>
             <ul
               className="transaction-list"
               style={{ overflowY: "scroll", height: "308px" }}

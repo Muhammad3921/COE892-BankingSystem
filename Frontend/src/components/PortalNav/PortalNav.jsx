@@ -10,7 +10,6 @@ function PortalNav() {
   const location = useLocation();
 
   const menu = [
-    { name: 'Profile', path: '/profile'},
     { name: 'Sign out', path: '/logout'}
   ];
   

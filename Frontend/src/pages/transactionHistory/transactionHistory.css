@@ -16,7 +16,7 @@ body {
   .message-text {
     font-size: 3.4em;
     font-weight: 600;
-    color: black;
+    color: #f1860b;
   }
   
   .slogan-text {
@@ -65,6 +65,7 @@ body {
     color: #f1860b;
     background-color: aliceblue;
     padding: 10px;
+    text-align: center;
     border: 2px solid lightgray;
   }
   

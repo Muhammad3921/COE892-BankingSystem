@@ -40,7 +40,7 @@ function App() {
       })()}
 
       {(() => {
-        if (isAuth() !== null) {
+        if (isAuth() !== null && sessionStorage.getItem("userId") !== '') {
           return <SidePanel />;
         }
       })()}

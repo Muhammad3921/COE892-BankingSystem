@@ -21,21 +21,18 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import './SidePanel.css';
 
+
 //const drawerWidth = 240;
 const menuItemsTop = [
   {name: 'Dashboard', icon: <Dashboard />, path: '/home'}
 ];
 
 const menuItemsMiddle = [
-  {name: 'Scheduler', icon: <Calendar />, path: '/scheduler'},
-  {name: 'Drug supply tracker', icon: <PrescriptionBottle />, path: '/drug-supply-tracker'},
-  {name: 'Prescription', icon: <RxFile />, path: '/prescriptionsubmit'},
-  {name: 'Drug interaction checker', icon: <Analytics />, path: '/drug-interaction-checker'},
-  {name: 'Side effect report', icon: <Analytics />, path: '/side-effect-report'},
+  {name: 'E-Transfer', icon: <RxFile />, path: '/etransfer'},
+  {name: 'Transactions', icon: <Analytics />, path: '/transactionHistory'},
 ];
 
 const menuItemsBottom = [
-  {name: 'Profile', icon: <Person />, path: '/profile'},
   {name: 'Sign out', icon: <SignoutBtn />, path: '/logout'}
 ]
 
