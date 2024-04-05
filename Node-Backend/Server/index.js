@@ -4,6 +4,7 @@ const signupRoute = require("../routes/signup");
 const loginRoute = require("../routes/login");
 const profileRoute = require("../routes/profile");
 const branchInfoRoute = require("../routes/branch-info");
+const transactionHistoryRoute = require("../routes/transactionHistory");
 const app = express();
 
 require("dotenv").config();
@@ -20,6 +21,7 @@ app.use("/signup", signupRoute);
 app.use("/login", loginRoute);
 app.use("/profile", profileRoute);
 app.use("/branch-info", branchInfoRoute);
+app.use("/transactionHistory", transactionHistoryRoute); 
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);

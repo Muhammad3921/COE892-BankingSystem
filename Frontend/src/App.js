@@ -21,6 +21,7 @@ import PrivateRoute from "./privateroute";
 import UnPrivateRoute from "./unprivateroute";
 import LogOutPrivateRoute from "./logoutprivateroute";
 import BranchHome from "./pages/home-branch-loggedin/BranchHome";
+import TransactionHistory from "./pages/transactionHistory/transactionHistory";
 
 function isAuth() {
   return sessionStorage.getItem("token");
@@ -63,6 +64,9 @@ function App() {
         </Route>
         <Route exact path="/login" element={<UnPrivateRoute />}>
           <Route exact path="/login" element={<Login />} />
+        </Route>
+        <Route exact path="/transactionHistory" element={<PrivateRoute />}>
+          <Route exact path="/transactionHistory" element={<TransactionHistory />} />
         </Route>
         {/* <Route exact path='/profile' element={<PrivateRoute/>}>
           <Route exact path='/profile' element={<Profile/>} />

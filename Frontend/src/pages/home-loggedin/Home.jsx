@@ -26,7 +26,7 @@ const Home = () => {
             <Button component={Link} to="/signup" id="getHelpButton">
               E-Transfer
             </Button>
-            <Button component={Link} to="/signup" id="getHelpButton">
+            <Button component={Link} to="/transactionHistory" id="getHelpButton">
               View Transaction History
             </Button>
             <Button component={Link} to="/signup" id="getHelpButton">
